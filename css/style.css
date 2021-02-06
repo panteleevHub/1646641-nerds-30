@@ -1,0 +1,291 @@
+/* Fonts */
+
+@ font-face {
+  font-family: "Roboto";
+  scr: url(../fonts/roboto.woff2) format("woff2"),
+       url(../fonts/roboto.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@ font-face {
+  font-family: "Roboto";
+  scr: url(../fonts/robotobold.woff2) format("woff2"),
+       url(../fonts/robotobold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@ font-face {
+  font-family: "Roboto";
+  scr: url(../fonts/robotomedium.woff2) format("woff2"),
+       url(../fonts/robotomedium.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Variables */
+
+:root {
+  --color-extra-light-gray: #EEEEEE;
+  --color-very-light-gray: #E1E1E1;
+  --color-light-gray: #D5D5D5;
+  --color-very-bright-gray: #DBDBDB;
+  --color-bright-gray: #DFDFDF;
+  --color-dark-gray: #888888;
+  --color-very-dark-gray: #666666;
+  --color-extra-dark-gray: #444444;
+  --color-light-black: #283136;
+  --color-black: #000000;
+  --color-soft-red: #FB565A;
+  --color-bright-red: #E74246;
+  --color-moderate-red: #D7373B;
+  --color-strong-cyan: #00CA74;
+  --color-lime-green: #00BC6C;
+  --color-dark-cyan: #00AA62;
+  --color-soft-yellow: #EFC849;
+  --color-bright-orange: #EAB534;
+  --color-vivid-orange: #E5A722;
+  --color-white: #FFFFFF;
+  --color-white-opacity: rgb(255, 255, 255, 0.3);
+}
+
+/* Global */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400px;
+  color: var(--color-light-black);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header */
+
+.main-header {
+  background-color: var(--color-extra-light-gray);
+}
+
+.main-navigation {
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a,
+.cart {
+  color: var(--color-black);
+}
+
+.site-navigation a:hover,
+.cart:hover {
+  color: var(--color-soft-red);
+}
+
+.site-navigation a:active,
+.cart:active {
+  opacity: 0.3;
+}
+
+.main-header-logo:hover {
+  opacity: 0.7;
+}
+
+.main-header-logo:active {
+  opacity: 0.3;
+}
+
+/* Features */
+
+.features {
+  background-color: var(--color-extra-light-gray);
+}
+
+.features-slider {
+  list-style: none;
+}
+
+.feature-slide-title {
+  font-size: 55px;
+  font-weight: 500;
+  line-height: 55px;
+  color: var(--color-black);
+}
+
+/* Button */
+
+.button {
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--color-white);
+  background-color: var(--color-soft-red);
+}
+
+.button:hover {
+  background-color: var(--color-bright-red);
+}
+
+.button:active {
+  background-color: var(--color-moderate-red);
+  color: var(--color-white-opacity);
+}
+
+/* Services list */
+
+
+.services-list {
+  list-style: none;
+}
+
+.service-item-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  color: var(--color-black);
+}
+
+.apps-button {
+  background-color: var(--color-strong-cyan);
+}
+
+.presentation-button {
+  background-color: var(--color-soft-yellow);
+}
+
+.apps-button:hover {
+  background-color: var(--color-lime-green);
+}
+
+.apps-button:active {
+  background-color: var(--color-dark-cyan);
+  color: var(--color-white-opacity);
+}
+
+.presentation-button:hover {
+  background-color: var(--color-bright-orange);
+}
+
+.presentation-button:active {
+  background-color: var(--color-vivid-orange);
+  color: var(--color-white-opacity);
+}
+
+/* About */
+
+.about-description {
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 45px;
+  color: var(--color-black);
+}
+
+.about-services {
+  font-weight: 700;
+}
+
+.about-services-list {
+  list-style: none;
+}
+
+.about-features {
+  font-weight: 700;
+  color: var(--color-black);
+}
+
+.about-description-term {
+  line-height: 18px;
+}
+
+.about-description-definition {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 64px;
+  color: var(--color-black);
+}
+
+.percent {
+  font-size: 26px;
+  line-height: 40px;
+}
+
+/* Partners */
+
+.partners-list {
+  list-style: none;
+}
+
+.partner-item a {
+  opacity: 0.2;
+}
+
+.partner-item a:hover {
+  opacity: 1;
+}
+
+.partner-item a:active {
+  opacity: 0.1;
+}
+
+/* Contacts */
+
+.contacts {
+  background-color: var(--color-white);
+}
+
+.contacts-site-heading {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.contacts-address {
+  font-style: normal;
+  line-height: 18px;
+  color: var(--color-very-dark-gray);
+}
+
+.contacts-phone a {
+  color: inherit;
+}
+
+/* Social */
+
+.social-slogan {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.social-desc {
+  line-height: 22px;
+  color: var(--color-extra-dark-gray);
+}
+
+.social-media {
+  list-style: none;
+}
+
+.social-button {
+  background-color: var(--color-very-light-gray);
+}
+
+.social-button:hover {
+  background-color: var(--color-bright-red);
+}
+
+.social-button:active {
+  background-color: var(--color-moderate-red);
+}
+
+.social-button:active img {
+  opacity: 0.3;
+}
