@@ -1,25 +1,25 @@
 /* Fonts */
 
-@ font-face {
+@font-face {
   font-family: "Roboto";
-  scr: url(../fonts/roboto.woff2) format("woff2"),
-       url(../fonts/roboto.woff) format("woff");
+  src: url("../fonts/roboto.woff2") format("woff2"),
+       url("../fonts/roboto.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
-@ font-face {
+@font-face {
   font-family: "Roboto";
-  scr: url(../fonts/robotobold.woff2) format("woff2"),
-       url(../fonts/robotobold.woff) format("woff");
+  src: url("../fonts/robotobold.woff2") format("woff2"),
+       url("../fonts/robotobold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 
-@ font-face {
+@font-face {
   font-family: "Roboto";
-  scr: url(../fonts/robotomedium.woff2) format("woff2"),
-       url(../fonts/robotomedium.woff) format("woff");
+  src: url("../fonts/robotomedium.woff2") format("woff2"),
+       url("../fonts/robotomedium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
@@ -52,7 +52,16 @@
 
 /* Global */
 
-body {
+.page {
+  box-sizing: border-box;
+}
+
+.page::before,
+.page::after {
+  box-sizing: inherit;
+}
+
+.page-body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", "Arial", sans-serif;
@@ -64,6 +73,11 @@ body {
 
 a {
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Header */
@@ -104,17 +118,17 @@ a {
   opacity: 0.3;
 }
 
-/* Features */
+/* Slider */
 
-.features {
+.slider {
   background-color: var(--color-extra-light-gray);
 }
 
-.features-slider {
+.slider-list {
   list-style: none;
 }
 
-.feature-slide-title {
+.slider-item-title {
   font-size: 55px;
   font-weight: 500;
   line-height: 55px;
