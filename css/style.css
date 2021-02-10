@@ -47,7 +47,10 @@
   --color-bright-orange: #EAB534;
   --color-vivid-orange: #E5A722;
   --color-white: #FFFFFF;
-  --color-white-opacity: rgb(255, 255, 255, 0.3);
+  --color-white-opacity: rgba(255, 255, 255, 0.3);
+  --color-black-opacity: rgba(0, 0, 0, 0.3);
+  --color-transparent-black: rgba(0, 0, 0, 0.0001);
+  --color-very-dark-cyan: rgba(0, 1, 1, 0.1);
 }
 
 /* Global */
@@ -68,7 +71,7 @@
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
-  font-weight: 400px;
+  font-weight: 400;
   color: var(--color-light-black);
 }
 
@@ -143,6 +146,7 @@ img {
   line-height: 18px;
   color: var(--color-white);
   background-color: var(--color-soft-red);
+  border-radius: 3px;
 }
 
 .button:hover {
@@ -248,6 +252,167 @@ img {
 
 .partner-item a:active {
   opacity: 0.1;
+}
+
+/* Catalog */
+
+.catalog-title {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+  color: var(--color-black);
+  background-color: var(--color-extra-light-gray);
+  margin: 0;
+}
+
+/* Filters*/
+
+.filter ul {
+  list-style: none;
+}
+
+.filter legend {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: var(--color-black);
+}
+
+/* Filter cost */
+
+.filter-cost-range {
+  background-color: var(--color-extra-light-gray);
+}
+
+.filter-cost-output {
+  line-height: 22px;
+}
+
+.filter-cost-input {
+  background-color: var(--color-extra-light-gray);
+  border: none;
+  border-radius: 3px;
+}
+
+/* Filters grid and specificities*/
+
+.filter-grid-list,
+.filter-specificities-list {
+  line-height: 19px;
+}
+
+.filter-grid-input:disabled + label,
+.filter-specificities-input:disabled + label {
+  opacity: 0.3;
+}
+
+/* Filter button */
+
+.filter-button {
+  color: var(--color-black);
+  background-color: var(--color-extra-light-gray);
+  outline: none;
+  border: none;
+}
+
+.filter-button:hover {
+  background-color: var(--color-bright-gray);
+}
+
+.filter-button:active {
+  color: var(--color-black-opacity);
+  background-color: var(--color-light-gray);
+  box-shadow: inset 0px 3px 0px var(--color-very-dark-cyan);
+}
+
+/* Sort filter */
+
+.sort-list {
+  list-style: none;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.sort-list a {
+  color: var(--color-black);
+  opacity: 0.3;
+}
+
+.sort-list a:hover {
+  opacity: 0.6;
+}
+
+.sort-list a:active,
+.current-sort-list-item a {
+  opacity: 1;
+}
+
+.sort-list-buttons {
+  list-style: none;
+}
+
+/* Templates list */
+
+.templates-list {
+  list-style: none;
+}
+
+.template-information {
+  background-color: var(--color-extra-light-gray);
+}
+
+.template-title {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.template-title {
+  color: var(--color-black);
+}
+
+.template-title:hover {
+  color: var(--color-soft-red);
+}
+
+.template-title:active {
+  color: var(--color-black-opacity);
+}
+
+.template-about {
+  line-height: 18px;
+  color: var(--color-very-dark-gray);
+}
+
+.template-price:active {
+  color: var(--color-white);
+}
+
+/* Page toggle */
+
+.page-toggle-list {
+  list-style: none;
+}
+
+.page-toggle-button {
+  color: var(--color-black);
+  background-color: var(--color-extra-light-gray);
+}
+
+.page-toggle-button:hover {
+  background-color: var(--color-bright-gray);
+}
+
+.page-toggle-button:active {
+  color: var(--color-black-opacity);
+  background-color: var(--color-bright-gray);
+  box-shadow: inset 0px 3px 0px var(--color-very-dark-cyan);
+}
+
+.current-page-button {
+  background-color: var(--color-transparent-black);
+  border: 3px solid var(--color-very-bright-gray);
+
 }
 
 /* Contacts */
