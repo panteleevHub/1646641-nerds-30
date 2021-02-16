@@ -97,8 +97,9 @@
 /* Container */
 
 .container {
-  width: 1160px;
+  width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* Header */
@@ -121,7 +122,7 @@
 }
 
 .site-navigation {
-  margin-left: 202px;
+  padding-left: 202px;
   margin-top: 75px;
   list-style: none;
 }
@@ -174,33 +175,37 @@
 }
 
 .slider-item {
+  display: none;
+}
+
+.slider-item-active {
   display: grid;
-  grid-template-columns: 1fr 763px;
-  grid-template-rows: 1fr auto 1fr;
+  grid-template-columns: 1fr auto;
 }
 
 .slide-image {
-  grid-column: 2 / -1;
-  grid-row: 1 / -1;
+   height: 431px;
 }
 
-.slider-item-title {
+.slide-title {
   font-size: 55px;
   font-weight: 500;
   line-height: 55px;
   color: var(--color-black);
   margin: 0;
-  margin-top: 78px;
+  margin-bottom: 26px;
+  padding-top: 79px;
 }
 
 .slider-item p {
+  width: 400px;
   margin: 0;
-  margin-top: 26px;
+  margin-bottom: 38px;
 }
 
-.slider-item-button {
+.slide-button {
+  display: block;
   width: 240px;
-  margin-top: 39px;
 }
 
 .slider-buttons {
@@ -210,7 +215,6 @@
 /* Button */
 
 .button {
-  height: 50px;
   font-weight: 500;
   line-height: 18px;
   color: var(--color-white);
@@ -240,7 +244,7 @@
 
 .services-list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   column-gap: 40px;
   list-style: none;
 }
@@ -252,10 +256,12 @@
   text-transform: uppercase;
   color: var(--color-black);
   margin: 0;
+  margin-bottom: 16px;
 }
 
 .service-item p {
   width: 260px;
+  margin: 0;
   margin-bottom: 32px;
 }
 
@@ -378,6 +384,10 @@
 
 /* Partners */
 
+.partners {
+  margin-bottom: 80px;
+}
+
 .partners-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -390,26 +400,27 @@
 }
 
 .logo-htmlacademy {
-  margin-top: 63px;
-  margin-bottom: 49px;
+  padding-top: 63px;
+  padding-bottom: 49px;
 }
 
 .logo-barbershop {
-  margin-top: 46px;
-  margin-bottom: 44px;
+  padding-top: 46px;
+  padding-bottom: 44px;
 }
 
 .logo-pink {
-  margin-top: 65px;
-  margin-bottom: 63px;
+  padding-top: 65px;
+  padding-bottom: 63px;
 }
 
 .logo-mishka {
-  margin-top: 52px;
-  margin-bottom: 44px;
+  padding-top: 52px;
+  padding-bottom: 44px;
 }
 
 .partner-item a {
+  display: block;
   opacity: 0.2;
 }
 
@@ -610,9 +621,8 @@
 .social {
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-template-rows: 1fr 1fr;
-  column-gap: 139px;
-  row-gap: 10px;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px 139px ;
   padding: 68px 0;
 }
 
