@@ -85,6 +85,7 @@
 }
 
 .image {
+  display: block;
   max-width: 100%;
   height: auto;
 }
@@ -117,7 +118,6 @@
 }
 
 .main-header-logo {
-  height: 66px;
   margin-top: 48px;
 }
 
@@ -183,10 +183,6 @@
   grid-template-columns: 1fr auto;
 }
 
-.slide-image {
-   height: 431px;
-}
-
 .slide-title {
   font-size: 55px;
   font-weight: 500;
@@ -215,6 +211,7 @@
 /* Button */
 
 .button {
+  display: block;
   font-weight: 500;
   line-height: 18px;
   color: var(--color-white);
@@ -440,7 +437,18 @@
   font-weight: 500;
   color: var(--color-black);
   background-color: var(--color-extra-light-gray);
+  text-align: center;
   margin: 0;
+  padding-top: 78px;
+  padding-bottom: 108px;
+}
+
+.catalog-container {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  column-gap: 141px;
+  padding-top: 55px;
+  padding-bottom: 60px;
 }
 
 /* Filters*/
@@ -449,30 +457,72 @@
   list-style: none;
 }
 
+.filter fieldset {
+  border: none;
+  padding: 0;
+}
+
 .filter legend {
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
+  text-transform: uppercase;
   color: var(--color-black);
 }
 
 /* Filter cost */
 
+.filter-cost {
+  margin-bottom: 54px;
+}
+
+.filter-cost legend {
+  margin-bottom: 48px;
+}
+
 .filter-cost-range {
+  width: 260px;
+  margin-bottom: 14px;
   background-color: var(--color-extra-light-gray);
+  border-radius: 3px;
 }
 
 .filter-cost-output {
   line-height: 22px;
 }
 
+.filter-cost-output label {
+  text-transform: uppercase;
+  margin-right: 7px;
+}
+
 .filter-cost-input {
+  width: 80px;
   background-color: var(--color-extra-light-gray);
   border: none;
   border-radius: 3px;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.min-cost-input {
+  margin-right: 29px;
 }
 
 /* Filters grid and specificities*/
+
+.filter-grid {
+  margin-bottom: 47px;
+}
+
+.filter-grid legend,
+.filter-specificities legend  {
+  margin-bottom: 13px;
+}
+
+.filter-specificities {
+  margin-bottom: 48px;
+}
 
 .filter-grid-list,
 .filter-specificities-list {
@@ -487,6 +537,7 @@
 /* Filter button */
 
 .filter-button {
+  width: 260px;
   color: var(--color-black);
   background-color: var(--color-extra-light-gray);
   outline: none;
@@ -503,12 +554,32 @@
   box-shadow: inset 0px 3px 0px var(--color-very-dark-cyan);
 }
 
+/* Templates */
+
+.templates {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+}
+
 /* Sort filter */
+
+.sort-filter {
+  margin-bottom: 48px;
+}
+
+.sort {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+}
 
 .sort-list {
   list-style: none;
   font-size: 14px;
   line-height: 18px;
+  text-transform: uppercase;
 }
 
 .sort-list a {
@@ -532,21 +603,38 @@
 /* Templates list */
 
 .templates-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 32px 42px;
   list-style: none;
+  margin-bottom: 55px;
 }
 
 .template-information {
+  display: none;
   background-color: var(--color-extra-light-gray);
+  padding-top: 26px;
+  padding-bottom: 44px;
 }
 
 .template-title {
+  display: block;
+  margin-bottom: 12px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.template-title h3 {
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
+  color: var(--color-black);
+  margin: 0;
 }
 
-.template-title {
-  color: var(--color-black);
+.template-price {
+  width: 200px;
+  margin: 0 auto;
 }
 
 .template-title:hover {
@@ -558,7 +646,11 @@
 }
 
 .template-about {
+  width: 255px;
   line-height: 18px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+  text-align: center;
   color: var(--color-very-dark-gray);
 }
 
@@ -573,8 +665,13 @@
 }
 
 .page-toggle-button {
+  width: 50px;
   color: var(--color-black);
   background-color: var(--color-extra-light-gray);
+}
+
+.next-page-button {
+  width: 260px;
 }
 
 .page-toggle-button:hover {
@@ -589,7 +686,8 @@
 
 .current-page-button {
   background-color: var(--color-transparent-black);
-  border: 3px solid var(--color-very-bright-gray);
+  outline: 3px solid var(--color-very-bright-gray);
+  outline-offset: -3px;
 
 }
 
@@ -614,6 +712,10 @@
 
 .contacts-phone a {
   color: inherit;
+}
+
+.contacts-button {
+  width: 219px;
 }
 
 /* Social */
