@@ -188,7 +188,7 @@
 
 .slider-item-active {
   display: grid;
-  grid-template-columns: 1fr 760px;
+  grid-template-columns: 397px 760px;
 }
 
 .slide-title {
@@ -244,7 +244,8 @@
 
 
 .services {
-  padding: 80px 0;
+  padding-top: 80px;
+  padding-bottom: 60px;
 }
 
 .services-list {
@@ -252,6 +253,12 @@
   grid-template-columns: repeat(3, 1fr);
   column-gap: 40px;
   list-style: none;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
 
 .service-item-title {
@@ -266,6 +273,7 @@
 
 .service-item p {
   width: 260px;
+  flex-grow: 1;
   margin: 0;
   margin-bottom: 32px;
 }
@@ -477,6 +485,7 @@
 .filter fieldset {
   border: none;
   padding: 0;
+  margin-left: -1px;
 }
 
 .filter legend {
@@ -519,7 +528,7 @@
 
 .filter-cost-output label {
   text-transform: uppercase;
-  margin-right: 7px;
+  margin-right: 8px;
 }
 
 .filter-cost-input {
@@ -532,7 +541,7 @@
 }
 
 .min-cost-input {
-  margin-right: 29px;
+  margin-right: 28px;
 }
 
 /* Filters grid and specificities*/
@@ -591,6 +600,8 @@
 /* Sort filter */
 
 .sort-filter {
+  display: flex;
+  align-items: center;
   margin-bottom: 48px;
 }
 
@@ -603,10 +614,17 @@
 }
 
 .sort-list {
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  padding-left: 266px;
+}
+
+.sort-list-item {
+  margin-right: 25px;
 }
 
 .sort-list a {
@@ -692,6 +710,8 @@
 /* Page toggle */
 
 .page-toggle-list {
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
 }
 
@@ -699,6 +719,8 @@
   width: 50px;
   color: var(--color-black);
   background-color: var(--color-extra-light-gray);
+  margin-right: 11px;
+  margin-bottom: 10px;
 }
 
 .next-page-button {
@@ -725,7 +747,7 @@
 /* Footer */
 
 .map-image {
-  width: 100%;
+  max-width: 1440px;
   height: 416px;
   margin: 0 auto;
 }
@@ -776,7 +798,7 @@
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: repeat(2, 1fr);
-  gap: 10px 140px;
+  gap: 10px 142px;
   padding: 68px 0;
 }
 
@@ -798,7 +820,6 @@
 
 .social-media {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   width: 258px;
   order: -1;
@@ -812,6 +833,11 @@
   border-radius: 50%;
   background-color: var(--color-very-light-gray);
   margin-bottom: 10px;
+  margin-right: 12px;
+}
+
+.social-media-item:nth-child(3n) {
+  margin-right: 0;
 }
 
 .social-button {
