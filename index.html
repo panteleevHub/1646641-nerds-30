@@ -43,7 +43,7 @@
     						<img class="image" src="img/iphones.png" width="760" height="431" alt="Айфоны">
               </div>
     				</li>
-    				<li class="slider-item">
+    				<li class="slider-item second-slide">
               <div class="slide-text">
       					<h3 class="slide-title">Любим математику как никто другой</h3>
       					<p>Никакого креатива, только математические формулы для расчета идеальных пропорций</p>
@@ -53,7 +53,7 @@
     						<img class="image" src="img/computer_monitors.png" width="760" height="431" alt="Компьютерные мониторы">
     					</div>
     				</li>
-    				<li class="slider-item">
+    				<li class="slider-item third-slide">
               <div class="slide-text">
       					<h3 class="slide-title">Только ночь,<br>только хардкор</h3>
       					<p>Работать днем, как все? Мы против этого.<br>Ближе к полуночи работа только начинается.</p>
@@ -64,17 +64,11 @@
     					</div>
     				</li>
     			</ul>
-    			<ul class="list slider-buttons">
-    				<li class="slider-button">
-    					<button type="button"></button>
-    				</li>
-    				<li class="slider-button">
-    					<button type="button"></button>
-    				</li>
-    				<li class="slider-button">
-    					<button type="button"></button>
-    				</li>
-    			</ul>
+    			<div class="list slider-buttons">
+    				<button class="slider-button active-button" type="button" aria-label="Первый слайд"></button>
+    				<button class="slider-button" type="button" aria-label="Второй слайд"></button>
+    				<button class="slider-button" type="button" aria-label="Третий слайд"></button>
+          </div>
         </div>
   		</section>
       <div class="container">
@@ -86,12 +80,12 @@
     					<p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
     					<a class="link button service-button websites-button" href="#">Заказать</a>
     				</li>
-    				<li class="service-item">
+    				<li class="service-item service-item-apps">
     					<h3 class="service-item-title">Приложения</h3>
     					<p>Покорите топ-10 приложений<br>в AppStore и Google Play</p>
     					<a class="link button service-button apps-button" href="#">Заказать</a>
     				</li>
-    				<li class="service-item">
+    				<li class="service-item service-item-presentations">
     					<h3 class="service-item-title">Презентации</h3>
     					<p>Вы даже не подозреваете, насколько вы изумительны!</p>
     					<a class="link button service-button presentation-button" href="#">Заказать</a>
@@ -157,20 +151,24 @@
       </div>
   	</main>
   	<footer class="main-footer">
-      <div class="map">
-        <img class="image map-image" src="img/map.png" width="1440" height="416" alt="Карта">
+      <div class="map-container">
+        <div class="map">
+          <img class="image map-image" src="img/map.png" width="1440" height="416" alt="Карта">
+        </div>
+        <div class="container">
+          <section class="contacts">
+            <h2 class="visually-hidden">Контактная информация</h2>
+            <p class="contacts-site-heading">NЁRDS DESIGN STUDIO</p>
+            <address class="contacts-address">
+              <p class="contacts-location">191186, Санкт-Петербург,<br>
+                  ул. Б. Конюшенная, д. 19/8</p>
+              <p class="contacts-phone">тел. <a class="link" href="tel:+78122757575">+7 (812) 275-75-75</a></p>
+            </address>
+            <a class="link button contacts-button" href="#">Напишите нам</a>
+          </section>
+        </div>
       </div>
       <div class="container">
-    		<section class="contacts">
-    			<h2 class="visually-hidden">Контактная информация</h2>
-    			<p class="contacts-site-heading">NЁRDS DESIGN STUDIO</p>
-    			<address class="contacts-address">
-    				<p class="contacts-location">191186, Санкт-Петербург,<br>
-    				ул. Б. Конюшенная, д. 19/8</p>
-    			    <p class="contacts-phone">тел. <a class="link" href="tel:+78122757575">+7 (812) 275-75-75</a></p>
-    			</address>
-    			<a class="link button contacts-button" href="#">Напишите нам</a>
-    		</section>
     		<section class="social">
     			<h2 class="visually-hidden">Наши страницы в социальных сетях</h2>
     			<p class="social-slogan">Давайте дружить, это выгодно!</p>
@@ -195,5 +193,27 @@
     		</section>
       </div>
   	</footer>
+    <section class="feedback">
+      <h2 class="visually-hidden">Обратная связь</h2>
+      <div class="feedback-wrapper">
+        <p class="feedback-slogan">Напишите нам</p>
+        <button class="close-button" type="button"></button>
+      </div>
+      <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru/">
+        <p class="feedback-item feedback-item-name">
+          <label for="feedback-name">Ваше имя:</label>
+          <input type="text" name="name" id="feedback-name" placeholder="Имя Фамилия" required>
+        </p>
+        <p class="feedback-item feedback-item-email">
+          <label for="feedback-email">Ваш email:</label>
+          <input type="email" name="email" id="feedback-email" placeholder="email@example.com" required>
+        </p>
+        <p class="feedback-item feedback-item-text">
+          <label for="feedback-email-text">Текст письма:</label>
+          <textarea name="email-text" id="feedback-email-text" placeholder="В свободной форме" required></textarea>
+        </p>
+        <button class="button feedback-button" type="submit">Отправить</button>
+      </form>
+    </section>
   </body>
 </html>
