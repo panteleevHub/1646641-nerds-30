@@ -151,6 +151,30 @@
   margin-right: 45px;
 }
 
+.current-navigation-item {
+  position: relative;
+}
+
+.studio.current-navigation-item::after {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  left: 1px;
+  width: 61px;
+  height: 2px;
+  background-color: var(--color-soft-red);
+}
+
+.shop.current-navigation-item::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 1px;
+  width: 73px;
+  height: 2px;
+  background-color: var(--color-soft-red);
+}
+
 .cart::before {
   content: "";
   position: absolute;
@@ -254,11 +278,14 @@
 
 .slider-buttons {
   position: absolute;
-  bottom: 86px;
-  left: 556px;
+  margin: 0 260px;
+  bottom: 96px;
+  left: 15px;
+  right: 15px;
   z-index: 20;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   list-style: none;
 }
 
@@ -270,7 +297,6 @@
   border: none;
   outline: none;
   margin-right: 17px;
-  margin-bottom: 10px;
   padding: 0;
   cursor: pointer;
 }
@@ -908,21 +934,47 @@
 /* Footer */
 
 .map-container {
+  position: relative;
   height: 416px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .map-image {
   max-width: 1440px;
-  height: 416px;
-  margin: 0 auto;
+  height: 100%;
 }
 
 /* Contacts */
 
+.contacts-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+}
+
+.contacts-marker {
+  position: relative;
+  z-index: 2;
+  width: 231px;
+  height: 190px;
+  right: 247px;
+  top: -27px;
+  background-image: url("../img/map-marker.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 231px 190px;
+}
+
 .contacts {
   position: relative;
-  top: -362px;
-  z-index: 1;
+  z-index: 2;
   width: 319px;
   background-color: var(--color-white);
   padding: 0 50px;
@@ -1000,10 +1052,10 @@
 .social-media-item {
   width: 78px;
   height: 78px;
-  border-radius: 50%;
-  background-color: var(--color-very-light-gray);
   margin-bottom: 10px;
   margin-right: 12px;
+  background-color: var(--color-very-light-gray);
+  border-radius: 50%;
 }
 
 .social-media-item:nth-child(3n) {
@@ -1011,11 +1063,30 @@
 }
 
 .social-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
   height: 100%;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
+.vk-button {
+  background-image: url("../img/vk-icon.svg");
+  background-size: 26px 15px;
+}
+
+.facebook-button {
+  background-image: url("../img/fb-icon.svg");
+  background-size: 12px 22px;
+}
+
+.instagram-button {
+  background-image: url("../img/insta-icon.svg");
+  background-size: 21px 21px;
+}
+
+.social-button:active {
+  opacity: 0.3;
 }
 
 .social-media-item:hover {
@@ -1024,10 +1095,6 @@
 
 .social-media-item:active {
   background-color: var(--color-moderate-red);
-}
-
-.social-media-item:active img {
-  opacity: 0.3;
 }
 
 /* Feedback */

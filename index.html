@@ -18,7 +18,7 @@
             <img class="image" src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Интернет магазина Нёрдс">
           </a>
           <ul class="list site-navigation">
-            <li class="site-navigation-item"><a class="link" href="#">Студия</a></li>
+            <li class="site-navigation-item current-navigation-item studio"><a class="link" href="#">Студия</a></li>
             <li class="site-navigation-item"><a class="link" href="#">Клиенты</a></li>
             <li class="site-navigation-item"><a class="link" href="catalog.html">Магазин</a></li>
             <li class="site-navigation-item"><a class="link" href="#">Контакты</a></li>
@@ -127,22 +127,22 @@
     			<h2 class="visually-hidden">Наши партнёры</h2>
     			<ul class="list partners-list">
     				<li class="partner-item logo-htmlacademy">
-    					<a class="link" href="https://htmlacademy.ru/intensive/htmlcss">
+    					<a class="link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" aria-label="Сайт htmlacademy">
     						<img class="image" src="img/logo-htmlacademy.png" width="199" height="68" alt="Логотип сайта htmlacademy">
     					</a>
     				</li>
     				<li class="partner-item logo-barbershop">
-    					<a class="link" href="#">
+    					<a class="link" href="#" target="_blank" aria-label="Сайт барбершопа Бородинский">
     						<img class="image" src="img/logo-barbershop.png" width="209" height="90" alt="Логотип барбершопа Бородинский">
     					</a>
     				</li>
     				<li class="partner-item logo-pink">
-    					<a class="link" href="#">
+    					<a class="link" href="#" target="_blank" aria-label="Сайт компании Пинк">
     						<img class="image" src="img/logo-pink.png" width="185" height="52" alt="Логотип компании Пинк">
     					</a>
     				</li>
     				<li class="partner-item logo-mishka">
-    					<a class="link" href="#">
+    					<a class="link" href="#" target="_blank" aria-label="Сайт компании Мишка">
     						<img class="image" src="img/logo-mishka.png" width="173" height="84" alt="Логотип компании Мишка">
     					</a>
     				</li>
@@ -152,10 +152,8 @@
   	</main>
   	<footer class="main-footer">
       <div class="map-container">
-        <div class="map">
-          <img class="image map-image" src="img/map.png" width="1440" height="416" alt="Карта">
-        </div>
-        <div class="container">
+        <img class="image map-image" src="img/map.png" width="1440" height="416" alt="Карта">
+        <div class="container contacts-container">
           <section class="contacts">
             <h2 class="visually-hidden">Контактная информация</h2>
             <p class="contacts-site-heading">NЁRDS DESIGN STUDIO</p>
@@ -166,6 +164,7 @@
             </address>
             <a class="link button contacts-button" href="#">Напишите нам</a>
           </section>
+          <div class="contacts-marker"></div>
         </div>
       </div>
       <div class="container">
@@ -175,19 +174,13 @@
     			<p class="social-desc">Скидка 10% для друзей из социальных сетей.</p>
     			<ul class="list social-media">
             <li class="social-media-item">
-              <a class="link social-button" href="#">
-                <img class="image" src="img/vk-icon.svg" width="26" height="15" alt="Вконтакте">
-              </a>
+              <a class="link social-button vk-button" href="#" target="_blank" aria-label="Вконтакте"></a>
             </li>
     				<li class="social-media-item">
-    					<a class="link social-button" href="#">
-    						<img class="image" src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук">
-    					</a>
+    					<a class="link social-button facebook-button" href="#" target="_blank" aria-label="Фейсбук"></a>
     				</li>
     				<li class="social-media-item">
-    					<a class="link social-button" href="#">
-    						<img class="image" src="img/insta-icon.svg" width="21" height="21" alt="Инстаграм">
-    					</a>
+    					<a class="link social-button instagram-button" href="#" target="_blank" aria-label="Инстаграм"></a>
     				</li>
     			</ul>
     		</section>
@@ -197,7 +190,7 @@
       <h2 class="visually-hidden">Обратная связь</h2>
       <div class="feedback-wrapper">
         <p class="feedback-slogan">Напишите нам</p>
-        <button class="close-button" type="button"></button>
+        <button class="close-button" type="button" aria-label="Закрыть"></button>
       </div>
       <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru/">
         <p class="feedback-item feedback-item-name">
