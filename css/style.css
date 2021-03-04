@@ -214,6 +214,18 @@
   opacity: 0.3;
 }
 
+.current-navigation-item a {
+  cursor: default;
+}
+
+.current-navigation-item a:hover {
+  color: var(--color-black);
+}
+
+.current-navigation-item a:active {
+  opacity: 1;
+}
+
 .main-header-logo:hover {
   opacity: 0.7;
 }
@@ -1118,7 +1130,16 @@
   background-color: var(--color-transparent-black);
   outline: 3px solid var(--color-very-bright-gray);
   outline-offset: -3px;
+  cursor: default;
+}
 
+.current-page-button:hover {
+  background-color: var(--color-transparent-black);
+}
+
+.current-page-button:active {
+  color: var(--color-black);
+  background-color: var(--color-transparent-black);
 }
 
 /* Footer */
