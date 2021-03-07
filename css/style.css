@@ -54,6 +54,7 @@
   --color-white: #FFFFFF;
   --color-white-opacity: rgba(255, 255, 255, 0.3);
   --color-black-opacity: rgba(0, 0, 0, 0.3);
+  --color-matterhorn-opacity: rgba(77,77,77, 0.12);
   --color-black-more-opacity: rgba(0, 0, 0, 0.4);
   --color-less-transparent-black: rgba(0, 0, 0, 0.25);
   --color-black-less-opacity: rgba(0, 0, 0, 0.15);
@@ -146,12 +147,13 @@
   display: flex;
   flex-wrap: wrap;
   padding-left: 203px;
-  margin-top: 75px;
+  margin-top: 65px;
   list-style: none;
 }
 
 .site-navigation-item {
   margin-right: 45px;
+  padding-top: 10px;
   padding-bottom: 9px;
 }
 
@@ -163,20 +165,10 @@
   cursor: default;
 }
 
-.studio.current-navigation-item::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 1px;
-  width: 61px;
-  height: 2px;
-  background-color: var(--color-soft-red);
-}
-
 .shop.current-navigation-item::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -6px;
   left: 1px;
   width: 73px;
   height: 2px;
@@ -217,14 +209,6 @@
 .cart:active {
   opacity: 0.3;
 }
-
-/*.current-navigation-item a:hover {
-  color: var(--color-black);
-}
-
-.current-navigation-item a:active {
-  opacity: 1;
-}*/
 
 .main-header-logo:hover {
   opacity: 0.7;
@@ -327,10 +311,6 @@
   margin-right: 17px;
   padding: 0;
   cursor: pointer;
-}
-
-.slider-button:focus {
-  outline: 2px solid var(--color-black);
 }
 
 .slider-button:nth-last-child(1) {
@@ -703,7 +683,7 @@
 .catalog-container {
   display: grid;
   grid-template-columns: 260px 1fr;
-  column-gap: 141px;
+  column-gap: 140px;
   padding-top: 55px;
 }
 
@@ -821,21 +801,24 @@
   margin-bottom: 50px;
 }
 
-.filter-grid legend,
-.filter-specificities legend  {
-  margin-bottom: 16px;
+.filter-grid legend {
+  margin-bottom: 17px;
 }
 
-.filter-grid-list,
-.filter-specificities-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 98px;
+.filter-specificities legend {
+  margin-bottom: 16px;
 }
 
 .filter-specificities-list {
   min-height: 179px;
+}
+
+.filter-grid-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.filter-specificities-item:not(:last-child) {
+  margin-bottom: 21px;
 }
 
 .filter-grid-item,
@@ -986,24 +969,30 @@
 
 .sort-list-item {
   margin-right: 25px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .sort-list-item:last-child {
   margin-right: 0;
 }
 
-.sort-list a {
+.sort-list-item a {
   color: var(--color-black);
   opacity: 0.3;
 }
 
-.sort-list a:hover {
+.sort-list-item:not(.current-sort-list-item) a:hover {
   opacity: 0.6;
 }
 
-.sort-list a:active,
+.sort-list .sort-list-item a:active {
+  opacity: 1;
+}
+
 .current-sort-list-item a {
   opacity: 1;
+  cursor: default;
 }
 
 /* Sort list buttons */
@@ -1035,13 +1024,17 @@
   transform: rotate(180deg);
 }
 
-.sort-list-button:hover {
+.sort-list-button:not(.current-sort-list-button):hover {
   opacity: 0.6;
 }
 
-.sort-list-button:active,
+.sort-list-buttons .sort-list-button:active {
+  opacity: 1;
+}
+
 .current-sort-list-button {
   opacity: 1;
+  cursor: default;
 }
 
 /* Templates list */
@@ -1049,22 +1042,24 @@
 .templates-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 32px 40px;
+  grid-gap: 30px 40px;
   list-style: none;
-  margin-bottom: 56px;
+  margin-bottom: 54px;
 }
 
 .template-item {
   position: relative;
+  box-sizing: content-box;
   max-width: 360px;
   padding-top: 40px;
   cursor: pointer;
+  object-fit: contain;
 }
 
 .template-item::before {
   content: "";
   position: absolute;
-  left: -1px;
+  left: 0;
   top: 0;
   width: 360px;
   height: 40px;
@@ -1076,20 +1071,26 @@
   opacity: 1;
 }
 
+.template-item img {
+  border: 1px solid var(--color-matterhorn-opacity);
+}
+
 .template-item:hover img {
   box-shadow: 0px 6px 15px var(--color-less-transparent-black);
+  border-top-color: var(--color-matterhorn);
 }
 
 .template-information {
   display: none;
   position: absolute;
+  left: 0;
   bottom: 0;
   flex-direction: column;
   align-items: center;
   width: 100%;
   background-color: var(--color-extra-light-gray);
   padding-top: 26px;
-  padding-bottom: 42px;
+  padding-bottom: 44px;
 }
 
 .template-item:hover .template-information {
@@ -1136,7 +1137,7 @@
   background-color: var(--color-bright-red);
 }
 
-.button:active {
+.template-price:active {
   background-color: var(--color-moderate-red);
 }
 
