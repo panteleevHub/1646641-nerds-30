@@ -317,6 +317,10 @@
   margin-right: 0;
 }
 
+.slider-button:focus {
+  outline: 1px solid var(--color-black-opacity);
+}
+
 .active-button {
   position: relative;
 }
@@ -1493,6 +1497,12 @@
 .feedback-item input:focus::placeholder,
 .feedback-item textarea:focus::placeholder {
   opacity: 1;
+}
+
+.feedback-item input:invalid,
+.feedback-item textarea:invalid {
+  color: var(--color-bright-red);
+  border-color: var(--color-bright-red);
 }
 
 .feedback-item textarea {

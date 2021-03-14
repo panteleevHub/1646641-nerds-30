@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Интернет магазин "Нёрдс"</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/32.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/180.png">
@@ -18,7 +18,7 @@
           <img class="image" src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Интернет магазина Нёрдс">
           </a>
           <ul class="list site-navigation">
-            <li class="site-navigation-item"><a class="link">Студия</a></li>
+            <li class="site-navigation-item"><a class="link" href="#">Студия</a></li>
             <li class="site-navigation-item"><a class="link" href="#">Клиенты</a></li>
             <li class="site-navigation-item"><a class="link" href="catalog.html">Магазин</a></li>
             <li class="site-navigation-item"><a class="link" href="#">Контакты</a></li>
@@ -33,7 +33,7 @@
         <div class="container slider-container">
           <h2 class="visually-hidden">Особенности нашей студии</h2>
           <ul class="list slider-list">
-            <li class="slider-item slider-item-active">
+            <li class="slider-item first-slide slider-item-active">
               <div class="slide-text">
                 <h3 class="slide-title">Долго, дорого, скрупулезно.</h3>
                 <p>Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.</p>
@@ -65,9 +65,9 @@
             </li>
           </ul>
           <div class="list slider-buttons">
-            <button class="slider-button active-button" type="button" aria-label="Первый слайд"></button>
-            <button class="slider-button" type="button" aria-label="Второй слайд"></button>
-            <button class="slider-button" type="button" aria-label="Третий слайд"></button>
+            <button class="slider-button active-button" type="button" id="first-slide" aria-label="Первый слайд"></button>
+            <button class="slider-button" type="button" id="second-slide" aria-label="Второй слайд"></button>
+            <button class="slider-button" type="button" id="third-slide" aria-label="Третий слайд"></button>
           </div>
         </div>
       </section>
@@ -214,7 +214,7 @@
         <button class="button feedback-button" type="submit">Отправить</button>
       </form>
     </section>
-    <script src="js/feedback.js"></script>
-    <script src="js/slider.js"></script>
+    <script src="js/feedback.min.js"></script>
+    <script src="js/slider.min.js"></script>
   </body>
 </html>

@@ -39,6 +39,20 @@ feedbackForm.addEventListener("submit", function (evt) {
       feedbackPopup.classList.remove("modal-error");
       feedbackPopup.offsetWidth = feedbackPopup.offsetWidth;
       feedbackPopup.classList.add("modal-error");
+
+  if (!userName.value) {
+    userName.style.border = "2px solid #e74246";
+    userName.style.color = "#e74246"
+  }
+  if (!userEmail.value) {
+    userEmail.style.border = "2px solid #e74246";
+    userEmail.style.color = "#e74246";
+  }
+  if (!userEmailText.value) {
+    userEmailText.style.border = "2px solid #e74246";
+    userEmailText.style.color = "#e74246";
+  }
+
   } else {
     if (isStorageSupport) {
       localStorage.setItem("login", userName.value);
