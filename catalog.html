@@ -44,9 +44,9 @@
               </div>
               <div class="price-controls">
                 <label for="filter-min-cost">от</label>
-                <input class="filter-cost-input min-cost-input" type="text" name="min-cost" id="filter-min-cost" value="0">
+                <input class="filter-cost-input min-cost-input" type="text" name="min-cost" id="filter-min-cost" maxlength="5" value="0">
                 <label for="filter-max-cost">до</label>
-                <input class="filter-cost-input" type="text" name="max-cost" id="filter-max-cost" value="15 000">
+                <input class="filter-cost-input" type="text" name="max-cost" id="filter-max-cost" maxlength="7" value="15 000">
               </div>
             </fieldset>
             <fieldset class="filter-grid">
@@ -212,24 +212,22 @@
           <div class="contacts-marker"></div>
         </div>
       </div>
-      <div class="container">
-        <section class="social">
-          <h2 class="visually-hidden">Наши страницы в социальных сетях</h2>
-          <p class="social-slogan">Давайте дружить, это выгодно!</p>
-          <p class="social-desc">Скидка 10% для друзей из социальных сетей.</p>
-          <ul class="list social-media">
-            <li class="social-media-item">
-              <a class="link social-button vk-button" href="#" target="_blank" aria-label="Вконтакте"></a>
-            </li>
-            <li class="social-media-item">
-              <a class="link social-button facebook-button" href="#" target="_blank" aria-label="Фейсбук"></a>
-            </li>
-            <li class="social-media-item">
-              <a class="link social-button instagram-button" href="#" target="_blank" aria-label="Инстаграм"></a>
-            </li>
-          </ul>
-        </section>
-      </div>
+      <section class="social container">
+        <h2 class="visually-hidden">Наши страницы в социальных сетях</h2>
+        <p class="social-slogan">Давайте дружить, это выгодно!</p>
+        <p class="social-desc">Скидка 10% для друзей из социальных сетей.</p>
+        <ul class="list social-media">
+          <li class="social-media-item">
+            <a class="link social-button vk-button" href="#" target="_blank" aria-label="Вконтакте"></a>
+          </li>
+          <li class="social-media-item">
+            <a class="link social-button facebook-button" href="#" target="_blank" aria-label="Фейсбук"></a>
+          </li>
+          <li class="social-media-item">
+            <a class="link social-button instagram-button" href="#" target="_blank" aria-label="Инстаграм"></a>
+          </li>
+        </ul>
+      </section>
     </footer>
     <section class="feedback">
       <h2 class="visually-hidden">Обратная связь</h2>
